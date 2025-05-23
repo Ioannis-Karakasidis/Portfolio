@@ -100,7 +100,7 @@ export class LanguageService {
     DaBubble: {
       link: 'https://dabubble.ioanniskarakasidis.com/',
       preview: '../../assets/projectpreviews/Screenshot project.png',
-      Github: '',
+      Github: 'https://github.com/Ioannis-Karakasidis/Portfolio/tree/main/da-bubble',
       duration: { en: '3 Weeks', de: '3 Wochen' },
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS'],
       details: [
