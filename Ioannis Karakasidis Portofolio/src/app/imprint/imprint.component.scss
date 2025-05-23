@@ -1,0 +1,78 @@
+html {
+  overflow-y: auto; 
+  overflow-x: hidden; 
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+body {
+  background-color: #89bcd9;
+  font-family: "JosefinSans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #262e34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+app-header {
+  background-color: #89bcd9;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.text {
+  font-family: "JosefinSans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #f8f5ec;
+}
+
+div {
+  display: flex;
+  flex: 1;
+  overflow-wrap: break-word;
+  flex-direction: column;
+  max-width: 1920px;
+  width: 100%;
+  min-height: 0;
+
+  @media (max-width: 1971px) {
+    width: 85%;
+  }
+}
+
+div > div:nth-child(1) {
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media (max-width: 400px) {
+  div > div:nth-child(1) {
+    height: unset;
+  }
+}
+
+a {
+  width: fit-content;
+}
+
+app-footer {
+  background-color: #89bcd9;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+
+}

@@ -1,0 +1,58 @@
+<div class="reference-section" data-aos="zoom-out">
+  <div>
+    <h2>
+      {{
+        isgerman.isgerman
+          ? "Brauchen Sie einen Teamplayer? Das sagen meine Kollegen über mich"
+          : "Need a teamplayer? Here's what my colleagues said about me"
+      }}
+    </h2>
+  </div>
+  <div id="boxreference">
+    <div *ngIf="isgerman.isgerman; else englishTemplate" class="templateboxs">
+      <div *ngFor="let ref of german" class="templatebox">
+        <h2>{{ ref.title }}</h2>
+        <div>
+          <p>Projekt</p>
+          <a
+            draggable="false"
+            href="https://join.ioanniskarakasidis.com/index.html"
+            target="_blank"
+            >{{ ref.project }}</a
+          >
+        </div>
+        <span>{{ ref.description }}</span>
+        <a
+          draggable="false"
+          *ngIf="ref.link"
+          [href]="ref.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn Profile</a
+        >
+      </div>
+    </div>
+
+    <ng-template #englishTemplate>
+      <div *ngFor="let ref of reference" class="templatebox">
+        <h2>{{ ref.title }}</h2>
+        <div>
+          <p>Project</p>
+          <a
+            href="https://join.ioanniskarakasidis.com/index.html"
+            target="_blank"
+            >{{ ref.project }}</a
+          >
+        </div>
+        <span>{{ ref.description }}</span>
+        <a
+          *ngIf="ref.link"
+          [href]="ref.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn Profile</a
+        >
+      </div>
+    </ng-template>
+  </div>
+</div>

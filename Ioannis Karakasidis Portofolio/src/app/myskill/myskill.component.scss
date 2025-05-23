@@ -1,0 +1,110 @@
+.myskill-section {
+  max-width: 860px;
+  gap: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media (max-width: 960px) {
+    flex-direction: column;
+    padding: unset;
+    gap: 32px;
+  }
+  > div:nth-child(1) {
+    overflow-wrap: anywhere;
+
+    > h1:nth-child(1) {
+      font-family: "Anta-Regular";
+      font-weight: 400;
+      font-size: 60px;
+      text-align: center;
+      color: #89bcd9;
+    }
+  }
+  > div:nth-child(2) {
+    display: flex;
+    gap: 5rem;
+    @media (max-width: 990px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 15rem;
+    }
+    > div:nth-child(1) {
+      height: 404px;
+      width: 409px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+
+      @media (max-width: 460px) {
+        height: 100%;
+        width: 96%;
+        justify-content: center;
+        gap: 23px;
+      }
+      @media (max-width: 200px) {
+        gap: unset;
+      }
+    }
+    > div:nth-child(2) {
+      background-image: url("../../assets/img/skillicons/Shape.png");
+      width: 369px;
+      height: 380px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      transition: background-image 0.8s ease; /* Animate the background-image change */
+      gap: 20px;
+
+      &:hover {
+        animation: backgroundImageChange 1s ease forwards;
+      }
+
+      @keyframes backgroundImageChange {
+        0% {
+          background-image: url("../../assets/img/skillicons/Shape.png");
+        }
+        100% {
+          background-image: url("../../assets/img/hoveredicons/Ellipse\ BG.png");
+        }
+      }
+
+      @media (max-width: 400px) {
+        width: 100%;
+      }
+      &:hover {
+        background-image: url("../../assets/img/hoveredicons/Ellipse\ BG.png");
+      }
+
+      > h3:nth-child(1) {
+        font-family: "JosefinSans";
+        font-size: 18px;
+        font-weight: 400;
+        color: #f8f5ec;
+        @media (max-width: 400px) {
+          font-size: 4vw;
+        }
+      }
+      > span:nth-child(3) {
+        font-family: "JosefinSans";
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        color: #fffdfd;
+        @media (max-width: 400px) {
+          font-size: 4vw;
+          width: 150px;
+        }
+      }
+      > div:nth-child(2) {
+        display: flex;
+        gap: 24px;
+      }
+    }
+  }
+}

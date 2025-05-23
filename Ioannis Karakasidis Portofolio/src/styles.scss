@@ -1,0 +1,77 @@
+@import "../node_modules/aos/dist/aos.css";
+
+@font-face {
+  font-family: "Anta-Regular";
+  src: url("assets/fonts/Anta-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JosefinSans";
+  src: url("assets/fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #89bcd9;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #89bcd9;
+}
+
+* {
+  margin: 0;
+  scroll-behavior: smooth !important;
+}
+
+a {
+  text-decoration: none;
+  color: #262e34;
+}
+
+.boxlinkss {
+  width: 93px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  > div:nth-child(5) {
+    max-width: 92px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    > button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      width: fit-content;
+    }
+  }
+  > a {
+    color: #262e34;
+    font-weight: 400;
+    font-size: 22px;
+    font-family: "JosefinSans";
+  }
+}
+
+.imagesize {
+  height: auto;
+  width: 80%;
+}

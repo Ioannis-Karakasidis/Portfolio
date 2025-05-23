@@ -1,0 +1,68 @@
+div {
+  width: 122px;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1124px) {
+    width: 154px;
+    padding: 30 63px 30px 63px;
+  }
+}
+
+.pe1 {
+  background-image: url("../../assets/img/Bluegithub.png");
+  height: 30px;
+  &:hover {
+    background-image: url("../../assets/img/hoveredicons/hoveredgithub.png");
+  }
+}
+
+.pe2 {
+  background-image: url("../../assets/img/Bluemail.png");
+  height: 30px;
+  &:hover {
+    background-image: url("../../assets/img/hoveredicons/hoveredmail.png");
+  }
+}
+
+.pe3 {
+  background-image: url("../../assets/img/Bluelinkedin.png");
+  height: 30px;
+  &:hover {
+    background-image: url("../../assets/img/hoveredicons/hoveredlinkedin.png");
+  }
+}
+
+.pe4 {
+  background-image: url("../../assets/img/Github\ button.png");
+  height: 30px;
+  width: 30px;
+
+  &:hover {
+    background-image: url("../../assets/img/hoveredicons/whitehoveredgithub.png");
+  }
+}
+
+.pe5 {
+  background-image: url("../../assets/img/Vector.png");
+  height: 30px;
+  width: 30px;
+
+  &:hover {
+    background-image: url("../../assets/img/hoveredicons/whitehoveredmail.png");
+  }
+}
+.pe6 {
+  background-image: url("../../assets/img/Linkedin\ button.png");
+  height: 30px;
+  width: 30px;
+  &:hover {
+    background-image: url("../../assets/img/hoveredicons/whitehoveredlinkedin.png");
+  }
+}
+
+.custom-flex {
+  width: 30px;
+  flex-direction: column;
+  gap: 10px;
+}
+

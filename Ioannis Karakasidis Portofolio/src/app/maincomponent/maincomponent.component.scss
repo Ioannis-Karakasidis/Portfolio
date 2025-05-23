@@ -1,0 +1,77 @@
+app-header {
+  background-color: #89bcd9;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+  overflow-x: hidden;
+  @media (max-width: 400px) {
+    display: none;
+  }
+}
+
+app-herosection {
+  background-color: #262e34;
+  display: flex;
+  justify-content: center;
+  padding: 79px 114px 79px 114px;
+  overflow-x: hidden;
+
+  @media (max-width: 400px) {
+    padding: unset;
+  }
+}
+
+.draggable-content:active {
+  cursor: grabbing;
+}
+
+app-footer {
+  background-color: #89bcd9;
+  display: flex;
+  justify-content: center;
+}
+
+app-whyme {
+  background-color: #262e34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 50px 0;
+  overflow-x: hidden;
+}
+
+app-myskill {
+  background-color: #262e34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+app-references {
+  background-color: #262e34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 50px 0;
+  overflow: hidden;
+}
+
+app-contactsection {
+  background-color: #262e34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+app-myprojectssection {
+  background-color: #262e34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 50px 0;
+  overflow-x: hidden;
+}

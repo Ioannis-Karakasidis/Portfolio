@@ -1,0 +1,19 @@
+<div>
+  @if (!path) {
+  <a draggable="false" href="#profile">
+    <img draggable="false" src="assets/img/Vector 29-1.png" alt="" />
+  </a>
+  } @else {
+  <a draggable="false" href="#profile">
+    <img draggable="false" src="assets/img/Vector 29.png" alt="" />
+  </a>
+  }
+  <span>I.KARAKASIDIS</span>
+  @if(!path){
+  <span>@if (isgerman.isgerman) { entwickler }@else {developer}</span>
+  } @else {
+  <span class="textcolor"
+    >@if (isgerman.isgerman) { entwickler }@else {developer}</span
+  >
+  }
+</div>

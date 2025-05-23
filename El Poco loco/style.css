@@ -1,0 +1,315 @@
+@font-face {
+  font-family: "Bangers";
+  src: url(fonts/Bangers-Regular.ttf);
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/380294_desert landscape with cactus trees and rocks_ _xl-1024-v1-0.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: "Bangers", serif;
+  overflow: hidden;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.Impressumdesign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 720px;
+  width: 100%;
+}
+
+.rotatepic {
+  position: relative;
+  z-index: 99999;
+}
+
+.btn {
+  position: absolute;
+  right: 34%;
+  top: 52%;
+  border: none;
+  background-color: #ffd50e;
+  border-radius: 50% 50%;
+  height: 11%;
+  width: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.closediv_button {
+  font-size: 24px;
+  color: white;
+}
+
+.throw-button-container,
+.jump-button-container {
+  width: 100%;
+  font-weight: 700;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.boxalign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 720px;
+  width: auto;
+  max-height: 480px;
+  height: auto;
+  position: relative;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 41px);
+  justify-content: center;
+  align-items: center;
+}
+
+.helpbutton {
+  position: relative;
+  z-index: 99;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closediv {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  font-size: 24px;
+  color: white;
+}
+
+.storydiv {
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  height: 100%;
+  overflow: hidden scroll;
+  scrollbar-width: none;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0px 60px;
+}
+
+.helpbutton:hover {
+  border-radius: unset;
+  background-color: unset;
+  box-shadow: unset;
+}
+
+.help {
+  width: 20px;
+  height: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+}
+
+a {
+  color: black;
+  font-size: 24px;
+}
+
+a:hover {
+  color: white;
+}
+
+.buttonscontainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.closing button:hover {
+  box-shadow: unset;
+  border-radius: unset;
+  background-color: unset;
+}
+
+.alignment {
+  width: fit-content;
+}
+
+.upbutton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonscontainer_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+}
+
+button span {
+  font-size: 24px;
+}
+
+.intro {
+  width: 100%;
+  height: 100%;
+}
+
+.outro {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.gameovercontainer {
+  position: absolute;
+  bottom: 5px;
+  z-index: 99;
+  width: 100%;
+  gap: 6%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gameovercontainer button {
+  font-weight: 700;
+  border: 1px solid #ffd50e;
+  background-color: #ffd50e;
+  color: #000;
+  height: 40px;
+  width: 30%;
+}
+
+.d-none {
+  display: none;
+}
+
+.gameovercontainer button:hover {
+  background-color: #e6bc00;
+  color: #fff;
+  border-radius: unset;
+}
+
+.intro img {
+  width: 100%;
+  height: 100%;
+}
+
+.outro img {
+  width: 100%;
+  height: 100%;
+}
+
+button img {
+  width: 35px;
+  height: 35px;
+}
+
+.relative-zindex:hover {
+  box-shadow: unset;
+  border-radius: unset;
+  background-color: unset;
+}
+
+.key {
+  display: inline-block;
+  font-size: 31px;
+  font-family: monospace;
+  color: white;
+  background: #1F2326;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  min-width: 40px;
+}
+
+.key:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.Instructions {
+  display: none;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.instructions {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.closing {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.usefulllinks {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.relative-zindex {
+  position: relative;
+  z-index: 99;
+}
+
+.closing button {
+  color: white;
+  font-size: 24px;
+  padding-right: 20px;
+}
+
+.white {
+  color: white;
+}
+
+.mobilealign {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}

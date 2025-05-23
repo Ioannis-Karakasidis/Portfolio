@@ -1,0 +1,59 @@
+<div class="header-box">
+  <app-headerlogo></app-headerlogo>
+  <div>
+    <a
+      draggable="false"
+      href="#why-me"
+      class="link"
+      [class.background]="activeLink === 'why-me'"
+      (click)="activeLink = 'why-me'"
+    >
+      {{ languageService.isgerman ? "Warum ich" : "Why me" }}
+    </a>
+
+    <a
+      draggable="false"
+      href="#Skills"
+      class="link"
+      [class.background]="activeLink === 'Skills'"
+      (click)="activeLink = 'Skills'"
+    >
+      {{ languageService.isgerman ? "Fähigkeiten" : "Skills" }}
+    </a>
+
+    <a
+      draggable="false"
+      href="#Projects"
+      class="link"
+      [class.background]="activeLink === 'Projects'"
+      (click)="activeLink = 'Projects'"
+    >
+      {{ languageService.isgerman ? "Projekte" : "Projects" }}
+    </a>
+
+    <a
+      draggable="false"
+      href="#Contact"
+      class="link"
+      [class.background]="activeLink === 'Contact'"
+      (click)="activeLink = 'Contact'"
+    >
+      {{ languageService.isgerman ? "Kontakt" : "Contact" }}
+    </a>
+  </div>
+  <div>
+    <button (click)="languageService.changetogerman()">
+      @if(!languageService.isgerman){
+      <img draggable="false" src="../../assets/img/DE.png" alt="" />
+      } @else {
+      <img draggable="false" src="../../assets/img/DE (1).png" alt="" />
+      }</button
+    ><button (click)="languageService.changetoenglish()">
+      @if(languageService.isgerman){
+      <img draggable="false" src="../../assets/img/EN (1).png" alt="" />
+      }@else {
+      <img draggable="false" src="../../assets/img/EN.png" alt="" />
+      }
+    </button>
+  </div>
+</div>

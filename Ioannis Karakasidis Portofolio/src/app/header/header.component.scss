@@ -1,0 +1,68 @@
+.header-box {
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 30px 0 30px;
+  > div:nth-child(2) {
+    > a {
+      text-decoration: none;
+      color: #262e34;
+      font-size: 26px;
+      font-weight: 500;
+      &:hover {
+        color: white;
+      }
+    }
+    font-family: "JosefinSans";
+    max-width: 677px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  div:nth-child(3) {
+    max-width: 92px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    > button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      width: fit-content;
+    }
+  }
+}
+
+@media (max-width: 1124px) {
+  .header-box {
+    padding: 16px 0 16px 0;
+    flex-direction: column;
+    height: fit-content;
+    gap: 10px;
+  }
+  .header-box > div:nth-child(2) {
+    flex-direction: column;
+  }
+  .header-box > div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.background {
+  background-image: url(../../assets/img/Ellipse.png);
+  height: 80px;
+  width: 128px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8f5ec !important;
+}

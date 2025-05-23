@@ -1,0 +1,62 @@
+body {
+  background-color: #89bcd9;
+  font-family: "JosefinSans";
+  font-weight: 400;
+  font-size: 18px;
+  color: #262e34;
+}
+
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+app-header {
+  background-color: #89bcd9;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  font-family: "JosefinSans";
+  font-weight: 400;
+  font-size: 18px;
+  color: #f8f5ec;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  overflow-wrap: break-word;
+  height: 100%;
+  > div:nth-child(1) {
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1971px) {
+      width: 90%;
+    }
+  }
+
+  > a {
+    width: fit-content;
+  }
+}
+
+app-footer {
+  background-color: #89bcd9;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

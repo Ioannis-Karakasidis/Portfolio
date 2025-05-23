@@ -1,0 +1,77 @@
+<div class="profile-card" id="profile" data-aos="fade-down">
+  <div class="d-none">
+    <app-headerlogo [path]="path"></app-headerlogo
+    ><button (click)="toggleImage()">
+      <div *ngIf="!showImage; else showMenu">X</div>
+    </button>
+    <ng-template #showMenu>
+      <img src="../../assets/img/menu.png" alt="" />
+    </ng-template>
+  </div>
+  <div>
+    <img
+      *ngIf="showImage || windowWidth > 400"
+      draggable="false"
+      src="../../assets/img/Bild1.png"
+      alt=""
+    />
+    <div *ngIf="!showImage && windowWidth <= 400" class="boxlinkss">
+      <a class="boxlinks" href="#why-me">{{
+        Isgerman.isgerman ? "Warum ich" : "Why me"
+      }}</a>
+      <a class="boxlinks" href="#Skills">{{
+        Isgerman.isgerman ? "Fähigkeiten" : "Skills"
+      }}</a>
+      <a class="boxlinks" href="#Projects">{{
+        Isgerman.isgerman ? "Projekte" : "Projects"
+      }}</a>
+      <a class="boxlinks" href="#Contact">{{
+        Isgerman.isgerman ? "Kontakt" : "Contact"
+      }}</a>
+      <div>
+        <button (click)="Isgerman.changetogerman()">
+          @if(!Isgerman.isgerman){
+          <img src="../../assets/img/DE.png" alt="" />
+          } @else {
+          <img src="../../assets/img/DE (1).png" alt="" />
+          }</button
+        ><button (click)="Isgerman.changetoenglish()">
+          @if(Isgerman.isgerman){
+          <img src="../../assets/img/EN (1).png" alt="" />
+          }@else {
+          <img src="../../assets/img/EN.png" alt="" />
+          }
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <div>
+        <app-headerlogo [path]="path"></app-headerlogo>
+
+        <span>Ioannis Karakasidis</span>
+        @if(Isgerman.isgerman) {
+        <span>Frontend Entwickler </span>
+        }@else {
+        <span>FRONTEND DEVELOPER </span>
+        }
+      </div>
+      <div>
+        <div>
+          <a href="#why-me" draggable="false"
+            ><img
+              draggable="false"
+              src="../../assets/img/Arrow Down.png"
+              alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    <app-contacticons
+      [customClass]="'custom-flex'"
+      [path]="path"
+    ></app-contacticons>
+  </div>
+</div>

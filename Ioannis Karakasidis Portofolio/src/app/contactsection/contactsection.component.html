@@ -1,0 +1,290 @@
+<div class="contact-section" id="Contact" data-aos="fade-down">
+  @if(isgerman.isgerman){
+  <div>
+    <div><h2>Kontaktieren Sie mich</h2></div>
+    <div>
+      <div>
+        <div>
+          <span>
+            "Sind Sie sich noch nicht sicher, ob ich die richtige Person für Ihr
+            Projekt bin? Ich würde mich freuen, die Möglichkeit zu haben, zu
+            besprechen, wie ich beitragen kann. Ich bin leidenschaftlich daran
+            interessiert, benutzerfreundliche, reaktionsschnelle und visuell
+            ansprechende Web-Erlebnisse zu schaffen. Egal, ob Sie ein Projekt im
+            Kopf haben oder einfach nur Möglichkeiten erkunden möchten, zögern
+            Sie nicht, sich zu melden!"
+          </span>
+        </div>
+        <div>
+          <div>
+            <img src="../../assets/img/mail.png" alt="" />
+            <p>
+              E-Mail:
+              <a class="link" href="mailto:gianniskarakasidhs@hotmail.com">{{ Email }}</a>
+            </p>
+          </div>
+          <div>
+            <img src="../../assets/img/phone.png" alt="" />
+            <span>Tel :</span
+            ><a href="tel:+49 1515 7491331"> +49 1515 7491331 </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <div>
+        <div>
+          <label for="">Ihr Name</label>
+          <input
+            [(ngModel)]="contactData.name"
+            name="inputname"
+            type="text"
+            #name="ngModel"
+            required
+          />
+          @if(!name.value && name.touched){
+          <span class="error">*Bitte geben Sie einen Namen ein</span>
+          }
+        </div>
+        <div>
+          <label for="">Ihre E-Mail</label>
+          <input
+            [(ngModel)]="contactData.email"
+            name="inputmail"
+            type="text"
+            #email="ngModel"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          />
+          @if(!email.valid && email.touched){
+          <span class="error"
+            >*Bitte geben Sie eine gültige E-Mail-Adresse ein</span
+          >
+          }
+        </div>
+      </div>
+      <div>
+        <label for="">Ihre Nachricht</label>
+        <textarea
+          [(ngModel)]="contactData.message"
+          name="inputmessage"
+          #message="ngModel"
+          minlength="4"
+          required
+        ></textarea>
+        @if(!message.valid && message.touched){
+        <span class="error">
+          {{
+            isgerman.isgerman
+              ? "Bitte geben Sie eine Nachricht mit mindestens 4 Wörtern ein."
+              : "Please enter a message with minimum 4 words "
+          }}*
+        </span>
+        }
+      </div>
+      <div>
+        <div>
+          <div>
+            <button (click)="changepic()" type="button">
+              <img
+                draggable="false"
+                *ngIf="Checked"
+                #checked
+                src="../../assets/img/Checkboxchecked.png"
+                alt=""
+                width="24"
+                height="24"
+              />
+              <img
+                draggable="false"
+                *ngIf="!Checked && !error"
+                #checdked
+                src="../../assets/img/Checkboxunchecked.png"
+                alt=""
+                width="24"
+                height="24"
+              />
+              <img
+                draggable="false"
+                *ngIf="error"
+                #error
+                src="../../assets/img/Ellipse 32.png"
+                alt=""
+                width="24"
+                height="24"
+              />
+            </button>
+            <div>
+              <div class="width">
+                <span #privacy>
+                  Ich habe die
+                  <a
+                    draggable="false"
+                    routerLink="/Datenschutz"
+                    routerLinkActive="active"
+                    class="textcolor"
+                    >Datenschutzerklärung </a
+                  >gelesen und stimme der Verarbeitung meiner Daten wie darin
+                  beschrieben zu.</span
+                >
+              </div>
+              <div>
+                @if(error ){
+                <span class="error"
+                  >*Bitte akzeptieren Sie die Datenschutzerklärung.
+                </span>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        <div><input #sendbutton type="submit" value="Versenden" /></div>
+      </div>
+    </form>
+  </div>
+
+  } @else {
+  <div>
+    <div><h2>Contact me</h2></div>
+    <div>
+      <div>
+        <div>
+          <span
+            >"Still not sure if I am the right person for your project? I would
+            love the opportunity to discuss how I can contribute. I am
+            passionate about creating user-friendly, responsive, and visually
+            appealing web experiences. Whether you have a project in mind or
+            just want to explore possibilities, feel free to reach out!</span
+          >
+        </div>
+        <div>
+          <div>
+            <img src="../../assets/img/mail.png" alt="" />
+            <p>
+              E-Mail:
+              <a class="link" href="mailto:gianniskarakasidhs@hotmail.com">{{ Email }}</a>
+            </p>
+          </div>
+          <div>
+            <img src="../../assets/img/phone.png" alt="" />
+            <span>Tel :</span
+            ><a href="tel:+49 1515 7491331"> +49 1515 7491331 </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <div>
+        <div>
+          <label for="">Your name</label>
+          <input
+            [(ngModel)]="contactData.name"
+            name="inputname"
+            type="text"
+            #name="ngModel"
+            required
+          />
+          @if(!email.value && email.touched){
+          <span class="error">*Please enter a name</span>
+          }
+        </div>
+        <div>
+          <label for="">Your Email</label>
+          <input
+            [(ngModel)]="contactData.email"
+            name="inputmail"
+            type="text"
+            #email="ngModel"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          />
+          @if(!email.valid && email.touched){
+          <span class="error">*Please enter a valid E-mail</span>
+          }
+        </div>
+      </div>
+      <div>
+        <label for="">Your Message</label
+        ><textarea
+          [(ngModel)]="contactData.message"
+          name="inputmessage"
+          #message="ngModel"
+          minlength="4"
+          required
+        ></textarea>
+        @if(!message.valid && message.touched){
+        <span class="error">*Please enter a minimum of 4 words message</span>
+        }
+      </div>
+      <div>
+        <div>
+          <div>
+            <button (click)="changepic()" type="button">
+              <img
+                *ngIf="Checked"
+                #checked
+                src="../../assets/img/Checkboxchecked.png"
+                alt=""
+                width="24"
+                height="24"
+              />
+              <img
+                *ngIf="!Checked && !error"
+                #checdked
+                src="../../assets/img/Checkboxunchecked.png"
+                alt=""
+                width="24"
+                height="24"
+              />
+              <img
+                *ngIf="error"
+                #error
+                src="../../assets/img/Ellipse 32.png"
+                alt=""
+                width="24"
+                height="24"
+              />
+            </button>
+            <div>
+              <div class="width">
+                <span #privacy>
+                  I've read the
+                  <a
+                    draggable="false"
+                    routerLink="/Datenschutz"
+                    routerLinkActive="active"
+                    class="textcolor"
+                    >privacy policy </a
+                  >and agree to the processing of my data as outlined</span
+                >
+              </div>
+              <div>
+                @if(error){
+                <span class="error">*Please accept the privacy policy </span>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <input #sendbutton class="active" type="submit" value="Send" />
+        </div>
+      </div>
+    </form>
+  </div>
+  }
+  <div>
+    <div>
+      <a href="#profile" draggable="false"
+        ><img draggable="false" src="../../assets/img/Arrow Up.png" alt=""
+      /></a>
+    </div>
+  </div>
+  <div class="complete" #overlay>
+    @if(isgerman.isgerman){
+    <div><span>Erfolgreich gesendet</span></div>
+    } @else {
+    <div><span> Successfully sent </span></div>
+    }
+  </div>
+</div>

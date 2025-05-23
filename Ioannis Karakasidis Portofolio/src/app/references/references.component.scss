@@ -1,0 +1,145 @@
+.reference-section {
+  max-width: 1250px;
+  width: 100%;
+  height: 479px;
+  gap: 80px;
+  padding: 100px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media (max-width: 1245px) {
+    height: unset;
+  }
+  @media (max-width: 400px) {
+    gap: 30px;
+  }
+  @media (max-width: 400px) {
+    padding: 50px 0 0 0;
+  }
+
+  > div:nth-child(1) {
+    > h2:nth-child(1) {
+      font-family: "JosefinSans";
+      font-weight: 400;
+      font-size: 32px;
+      text-align: center;
+      color: #89bcd9;
+      @media (max-width: 400px) {
+        font-size: 18px;
+      }
+    }
+  }
+  > div:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    @media (max-width: 1245px) {
+      overflow-x: scroll;
+      scrollbar-width: none;
+    }
+  }
+}
+
+.templatebox {
+  background-image: url("../../assets/img/skillicons/Shape.png");
+  min-width: 369px;
+  width: 100%;
+  min-height: 380px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-image 0.8s ease;
+  gap: 20px;
+
+  &:hover {
+    animation: backgroundImageChanges 1s ease forwards;
+  }
+
+  @keyframes backgroundImageChanges {
+    0% {
+      background-image: url("../../assets/img/skillicons/Shape.png");
+    }
+    100% {
+      background-image: url("../../assets/img/hoveredicons/Ellipse\ BG.png");
+    }
+  }
+  > h2:nth-child(1) {
+    font-family: "JosefinSans";
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    color: #f8f5ec;
+    width: 60%;
+    @media (max-width: 400px) {
+      font-size: 19px;
+    }
+  }
+  > div:nth-child(2) {
+    display: flex;
+    gap: 5px;
+    > p:nth-child(1) {
+      font-family: "JosefinSans";
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      color: #f8f5ec;
+    }
+    > a:nth-child(2) {
+      font-family: "JosefinSans";
+      font-weight: 400;
+      font-size: 18px;
+      color: #89bcd9;
+      text-align: center;
+    }
+  }
+
+  > span:nth-child(3) {
+    width: 292px;
+    font-family: "JosefinSans";
+    font-weight: 400;
+    font-size: 15px;
+    color: #fffdfd;
+    text-align: center;
+    @media (max-width: 400px) {
+      font-size: 17px;
+    }
+    @media (max-width: 320px) {
+      font-size: 12px;
+      width: 227px;
+    }
+  }
+  > a:nth-child(4) {
+    font-family: "JosefinSans";
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #89bcd9;
+    text-decoration: underline;
+  }
+}
+
+.templateboxs {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    height: 67rem;
+  }
+  @media (max-width: 500px) {
+    width: 92%;
+  }
+  @media (max-width: 400px) {
+    flex-direction: row;
+    height: unset;
+    width: unset;
+  }
+}

@@ -1,0 +1,36 @@
+.footerbox {
+  background-color: #89bcd9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1920px;
+  width: 100%;
+  a {
+    color: #262e34;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'JosefinSans';
+    scroll-behavior: smooth;
+    &:hover {
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  height: 214px;
+  margin: 0 30px 0 30px;
+  @media (max-width: 1124px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

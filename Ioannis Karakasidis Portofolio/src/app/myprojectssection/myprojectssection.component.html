@@ -1,0 +1,116 @@
+<div class="myprojects-section" id="Projects">
+  <div>
+    <div>
+      <h2>{{ information.isgerman ? "Meine Projekte" : "My Projects" }}</h2>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div [ngClass]="{ active: activeProject === 'Join' }">
+            <button (click)="showactiveclass($event, 'Join')">1. Join</button>
+          </div>
+          <div [ngClass]="{ active: activeProject === 'ElPocoLoco' }">
+            <button (click)="showactiveclass($event, 'ElPocoLoco')">
+              2. El Poco Loco
+            </button>
+          </div>
+          <div [ngClass]="{ active: activeProject === 'DaBubble' }">
+            <button (click)="showactiveclass($event, 'DaBubble')">
+              3. DaBubble
+            </button>
+          </div>
+        </div>
+        <div>
+          <div
+            *ngIf="information.information[activeProject]"
+            class="project-details"
+          >
+            <div data-aos="fade-right" id="left-div">
+              <div
+                *ngFor="
+                  let section of information.information[activeProject].details
+                "
+              >
+                <div>
+                  <img src="../../assets/img/Ellipse 8.png" alt="" />
+                  <h2 class="title">
+                    {{ section.title[information.isgerman ? "de" : "en"] }}
+                  </h2>
+                </div>
+                <div>
+                  <span class="text">{{
+                    section.description[information.isgerman ? "de" : "en"]
+                  }}</span>
+                </div>
+              </div>
+            </div>
+            <div data-aos="fade-left" id="right-div">
+              <div class="smalltext">
+                <p class="title">
+                  {{ information.isgerman ? "Technologien" : "Technologies "
+                  }}<span class="mobileview">:</span>
+                </p>
+                <p class="mobileview">
+                  {{ information.information[activeProject].technologies }}
+                </p>
+              </div>
+
+              <div>
+                <div
+                  *ngFor="
+                    let icon of information.information[activeProject]
+                      .technologies
+                  "
+                >
+                  <img
+                    draggable="false"
+                    src="../../assets/img/skillicons/{{ icon }}.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div>
+                <img
+                  draggable="false"
+                  class="preview"
+                  src="{{ information.information[activeProject].preview }}"
+                  alt=""
+                />
+              </div>
+              <div>
+                @if(information.information[activeProject].link){
+                <a
+                  class="text"
+                  target="_blank"
+                  href="{{ information.information[activeProject].link }}"
+                  >Live Test</a
+                ><a
+                  href="{{ information.information[activeProject].Github }}"
+                  class="text"
+                  target="_blank"
+                  >GitHub</a
+                >
+                }
+              </div>
+            </div>
+          </div>
+          <div class="mobilegit">
+            @if(information.information[activeProject].link){
+            <a
+              class="text"
+              target="_blank"
+              href="{{ information.information[activeProject].link }}"
+              >Live Test</a
+            ><a
+              href="{{ information.information[activeProject].Github }}"
+              class="text"
+              target="_blank"
+              >GitHub</a
+            >
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
