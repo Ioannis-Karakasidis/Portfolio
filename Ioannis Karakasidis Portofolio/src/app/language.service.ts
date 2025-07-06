@@ -33,7 +33,7 @@ export class LanguageService {
       link: 'https://elpocoloco.ioanniskarakasidis.com/index.html',
       preview: '../../assets/projectpreviews/ElPocoLocopreview.png',
       Github:
-        'https://github.com/Ioannis-Karakasidis/Portofolio/tree/main/El%20Poco%20loco',
+        'https://github.com/Ioannis-Karakasidis/Portfolio/tree/main/El%20Poco%20loco',
       duration: { en: '5 Weeks', de: '5 Wochen' },
       technologies: ['HTML', 'Javascript', 'CSS'],
       details: [
@@ -67,7 +67,7 @@ export class LanguageService {
       link: 'https://join.ioanniskarakasidis.com/index.html',
       preview: '../../assets/projectpreviews/Joinpreview.png',
       Github:
-        'https://github.com/Ioannis-Karakasidis/Portofolio/tree/main/Join',
+        'https://github.com/Ioannis-Karakasidis/Portfolio/tree/main/Join',
       duration: { en: '2 Months', de: '2 Monate' },
       technologies: ['HTML', 'Javascript', 'CSS'],
       details: [
