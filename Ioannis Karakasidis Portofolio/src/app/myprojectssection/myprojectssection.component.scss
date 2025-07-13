@@ -89,6 +89,7 @@
               align-items: center;
               flex-direction: column-reverse;
               @media (max-width: 445px) {
+                margin: 15px 0 0 0;
                 gap: 25px;
               }
             }
@@ -172,8 +173,6 @@
               align-items: center;
               flex-direction: column;
               gap: 5px;
-              @media (max-width: 527px) {
-              }
               > div:nth-child(1) {
                 display: flex;
                 width: 100%;
@@ -181,6 +180,9 @@
                 justify-content: space-evenly;
                 @media (max-width: 1150px) {
                   width: 250px;
+                }
+                @media only screen and (min-device-width: 320px) and (max-device-width: 1066px) {
+                  width: 100% !important;
                 }
                 > p:nth-child(1) {
                   display: flex;
