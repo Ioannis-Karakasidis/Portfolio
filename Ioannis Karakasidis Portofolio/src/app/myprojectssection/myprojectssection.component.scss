@@ -277,6 +277,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1066px) {
+    display: flex !important;
+    margin: 15px 0 15px 0;
+  }
   > a:nth-child(1) {
     background: none;
     background-color: #89bcd9;
@@ -291,8 +295,8 @@
     color: #89bcd9;
     padding: 13px 30px 13px 30px;
     border-radius: 30px;
+
     @media (max-width: 445px) {
-      display: flex;
       justify-content: center;
       align-items: center;
     }
