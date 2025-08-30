@@ -29,8 +29,6 @@
 
 ---
 
-# Ioannis Karakasidis Portfolio
-
 Welcome to my portfolio! Here you’ll find a showcase of my main web development projects, each built with a focus on clean code, modern technologies, and user experience.
 
 ---
